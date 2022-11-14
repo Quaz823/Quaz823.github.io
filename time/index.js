@@ -4,9 +4,30 @@ function LengthOfNum(number){
     var length = Math.log(number) * Math.LOG10E + 1 | 0;
     return length;
 }
-console.log(LengthOfNum(today.getMinutes()));
 
-var StartTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+function AddZeroToNum(number){
+    if (LengthOfNum(number) < 2){
+        return true;
+    } else {
+        return false;
+    }
+}
+if(AddZeroToNum(today.getHours())){
+    var Hours = "0"+today.getHours();
+}else{
+    var Hours = today.getHours();
+};
+if(AddZeroToNum(today.getMinutes())){
+    var Hours = "0"+today.getMinutes();
+}else{
+    var Hours = today.getMinutes();
+};
+if(AddZeroToNum(today.getSeconds())){
+    var Hours = "0"+today.getSeconds();
+}else{
+    var Hours = today.getSeconds();
+};
+var StartTime = Hours + ":" + Minutes + ":" + Seconds;
 document.getElementById("StartTime").innerHTML = "Start Time: " + StartTime;
 
 function updateTime(){
