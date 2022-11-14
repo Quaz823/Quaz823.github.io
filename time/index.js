@@ -62,9 +62,11 @@ function updateElapsedTime(){
     ElapsedSeconds+=1;
     document.getElementById("ElapsedTime").innerHTML="Elapsed Seconds: "+ElapsedHours+":"+ElapsedMinutes+":"+ElapsedSeconds;
     if (ElapsedSeconds>=60){
+        ElapsedSeconds=0;
         ElapsedMinutes+=1;
     }
     if (ElapsedMinutes>=60){
+        ElapsedMinutes=0;
         ElapsedHours+=1;
     }
 }
