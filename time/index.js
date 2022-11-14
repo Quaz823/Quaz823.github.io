@@ -55,10 +55,18 @@ function updateTime(){
     document.getElementById("CurrentTime").innerHTML = "Current Time: " + CurrentTime;
 };
 
-let ElapsedTime = 0;
+let ElapsedSeconds = 0;
+let ElapsedMinutes = 0;
+let ElapsedHours = 0;
 function updateElapsedTime(){
-    ElapsedTime+=1;
-    document.getElementById("ElapsedTime").innerHTML="Elapsed Seconds: "+ElapsedTime;
+    ElapsedSeconds+=1;
+    document.getElementById("ElapsedTime").innerHTML="Elapsed Seconds: "+ElapsedHours+":"+ElapsedMinutes+":"+ElapsedSeconds;
+    if (ElapsedSeconds>=60){
+        ElapsedMinutes+=1;
+    }
+    if (ElapsedMinutes>=60){
+        ElapsedHours+=1;
+    }
 }
 
 setInterval(updateTime, 1000);
