@@ -55,9 +55,20 @@ function updateTime(){
     document.getElementById("CurrentTime").innerHTML = "Current Time: " + CurrentTime;
 };
 
+let ElapsedSeconds = 0;
+let ElapsedMinutes = 0;
+let ElapsedHours = 0;
 function updateElapsedTime(){
-    var timething = new Date();
-    document.getElementById("ElapsedTime").innerHTML="Elapsed Time: "+(timething.getHours()-today.getHours())+":"+(timething.getMinutes()-today.getMinutes())+":"+(timething.getSeconds()-today.getSeconds());
+    ElapsedSeconds+=1;
+    document.getElementById("ElapsedTime").innerHTML="Elapsed Seconds: "+ElapsedHours+":"+ElapsedMinutes+":"+ElapsedSeconds;
+    if (ElapsedSeconds>=60){
+        ElapsedSeconds=0;
+        ElapsedMinutes+=1;
+    }
+    if (ElapsedMinutes>=60){
+        ElapsedMinutes=0;
+        ElapsedHours+=1;
+    }
 }
 
 setInterval(updateTime, 1000);
