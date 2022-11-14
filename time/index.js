@@ -4,7 +4,7 @@ function LengthOfNum(number){
     var length = Math.log(number) * Math.LOG10E + 1 | 0;
     return length;
 }
-print(LengthOfNum(today.getMinutes()));
+console.log(LengthOfNum(today.getMinutes()));
 
 var StartTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 document.getElementById("StartTime").innerHTML = "Start Time: " + StartTime;
