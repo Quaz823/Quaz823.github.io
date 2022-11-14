@@ -56,7 +56,8 @@ function updateTime(){
 };
 
 function updateElapsedTime(){
-    document.getElementById("ElapsedTime").innerHTML="Elapsed Time: "+timething.getHours()-today.getHours()+":"+timething.getMinutes()-today.getMinutes()+":"+timething.getSeconds()-today.getSeconds();
+    var timething = new Date();
+    document.getElementById("ElapsedTime").innerHTML="Elapsed Time: "+(timething.getHours()-today.getHours())+":"+(timething.getMinutes()-today.getMinutes())+":"+(timething.getSeconds()-today.getSeconds());
 }
 
 setInterval(updateTime, 1000);
