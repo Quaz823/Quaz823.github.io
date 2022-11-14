@@ -13,4 +13,4 @@ do{
     sleep(1000);
     var CurrentTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     document.getElementById("ElapsedTime").innerHTML = CurrentTime;
-} while (true);
+} while (sleep(1000));
