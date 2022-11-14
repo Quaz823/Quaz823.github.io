@@ -12,6 +12,6 @@ document.getElementById("StartTime").innerHTML = StartTime;
 sleep(5000);
 while(true){
     sleep(1000);
-    var CurrentTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    let CurrentTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     document.getElementById("ElapsedTime").innerHTML = CurrentTime;
 }
