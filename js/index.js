@@ -9,9 +9,9 @@ function sleep(milliseconds) {
 var today = new Date();
 var StartTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 document.getElementById("StartTime").innerHTML = StartTime;
-sleep(5000);
-while(true){
-    sleep(1000);
+
+function updateTime(){
     let CurrentTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     document.getElementById("ElapsedTime").innerHTML = CurrentTime;
-}
+};
+setInterval(updateTime, 1000)
