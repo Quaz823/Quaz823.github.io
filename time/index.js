@@ -34,9 +34,25 @@ if(AddZeroToNum(today.getSeconds())){
 var StartTime = Hours + ":" + Minutes + ":" + Seconds;
 document.getElementById("StartTime").innerHTML = "Start Time: " + StartTime;
 
+if(AddZeroToNum(timething.getHours())){
+    var Hours = "0"+timething.getHours();
+}else{
+    var Hours = timething.getHours();
+};
+if(AddZeroToNum(timething.getMinutes())){
+    var Minutes = "0"+timething.getMinutes();
+}else{
+    var Minutes = timething.getMinutes();
+};
+if(AddZeroToNum(timething.getSeconds())){
+    var Seconds = "0"+timething.getSeconds();
+}else{
+    var Seconds = timething.getSeconds();
+};
+
 function updateTime(){
     var timething = new Date();
-    let CurrentTime = timething.getHours() + ":" + timething.getMinutes() + ":" + timething.getSeconds();
+    let CurrentTime = Hours + ":" + Minutes + ":" + Seconds;
     document.getElementById("CurrentTime").innerHTML = "Current Time: " + CurrentTime;
 };
 
