@@ -11,7 +11,7 @@ function updateTime(){
 let ElapsedTime = 0;
 function updateElapsedTime(){
     ElapsedTime+=1;
-    document.getElementById("ElapsedTime").innerHTML="Elapsed Time: "+ElapsedTime;
+    document.getElementById("ElapsedTime").innerHTML="Elapsed Seconds: "+ElapsedTime;
 }
 
 setInterval(updateTime, 1000);
