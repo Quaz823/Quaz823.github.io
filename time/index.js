@@ -12,21 +12,25 @@ function AddZeroToNum(number){
         return false;
     }
 }
+var Hours = null;
+var Minutes = null;
+var Seconds = null;
 if(AddZeroToNum(today.getHours())){
     var Hours = "0"+today.getHours();
 }else{
     var Hours = today.getHours();
 };
 if(AddZeroToNum(today.getMinutes())){
-    var Hours = "0"+today.getMinutes();
+    var Minutes = "0"+today.getMinutes();
 }else{
-    var Hours = today.getMinutes();
+    var Minutes = today.getMinutes();
 };
 if(AddZeroToNum(today.getSeconds())){
-    var Hours = "0"+today.getSeconds();
+    var Seconds = "0"+today.getSeconds();
 }else{
-    var Hours = today.getSeconds();
+    var Seconds = today.getSeconds();
 };
+
 var StartTime = Hours + ":" + Minutes + ":" + Seconds;
 document.getElementById("StartTime").innerHTML = "Start Time: " + StartTime;
 
