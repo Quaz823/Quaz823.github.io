@@ -1,7 +1,5 @@
-h1{
-    color: white;
-    outline-color: black;
-}
 html{
     background-color: black;
-}
+    color: white;
+    outline-color: black;
+};
