@@ -11,6 +11,11 @@ function makeGrid(cols, rows) {
     };
 };
 
+function colorSquare(x, y) {
+    let coordinates = toString(x+','+y);
+    document.getElementById('4,4').style.backgroundColor = "green";
+}
+
 makeGrid(16, 9);
 
-document.getElementById('4,4')
+colorSquare(4,4);
