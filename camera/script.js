@@ -1,4 +1,4 @@
-var video = document.createElement('video');
+var video = document.getElementById("video");
 video.setAttribute('playsinline', 'true');
 video.setAttribute('autoplay', 'true');
 video.setAttribute('muted', 'false');
