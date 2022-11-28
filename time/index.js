@@ -60,7 +60,7 @@ let ElapsedMinutes = 0;
 let ElapsedHours = 0;
 function updateElapsedTime(){
     ElapsedSeconds+=1;
-    document.getElementById("ElapsedTime").innerHTML="Elapsed Seconds: "+ElapsedHours+":"+ElapsedMinutes+":"+ElapsedSeconds;
+    document.getElementById("ElapsedTime").innerHTML="Elapsed Time: "+ElapsedHours+":"+ElapsedMinutes+":"+ElapsedSeconds;
     if (ElapsedSeconds>=60){
         ElapsedSeconds=0;
         ElapsedMinutes+=1;
